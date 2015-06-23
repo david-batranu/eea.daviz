@@ -27,13 +27,23 @@
           />
     </configure>
 
+    <configure zcml:condition="installed eea.sparql">
+      <genericsetup:registerProfile
+          name="sparql"
+          title="EEA Daviz:eea.sparql integration"
+          directory="profiles/sparql"
+          description="Extension profile for EEA Daviz - eea.sparql integration."
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          />
+    </configure>
+
     <genericsetup:registerProfile
             name="upgrade90"
             title="EEA Daviz upgrade profile for v9.0"
             directory="profiles/upgrades/to_90"
             description='EEA Daviz upgrade profile for v9.0'
             provides="Products.GenericSetup.interfaces.EXTENSION" />
-    
+
     <genericsetup:registerProfile
             name="upgrade93"
             title="EEA Daviz upgrade profile for v9.3"

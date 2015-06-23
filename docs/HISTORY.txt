@@ -1,8 +1,20 @@
 Changelog
 =========
 
-9.6.dev0 - (unreleased)
+10.0.dev0 - (unreleased)
 -----------------------
+* Change: Moving hard dependency to eea.sparql and eea.versions to separate extras_require.
+  [david-batranu]
+* Pre-Upgrade step:
+
+    **You can ignore this if you are using `eea.daviz [full]`**
+
+    * if you do NOT use eea.sparql or eea.versions:
+        * within "Plone > Site setup > Add-ons" deactivate EEA Versions and EEA Sparql
+    * if you DO use sparql queries (eea.sparql):
+        * in the eggs section of `buildout.cfg`: replace `eea.daviz` with `eea.daviz [sparql]`
+        * in the zcml section of `buildout.cfg`: replace `eea.daviz` with `eea.daviz-sparql`
+
 
 9.5 - (2015-05-15)
 ------------------
@@ -29,7 +41,7 @@ Changelog
 ------------------
 * Change: Switched to curl in the jenkins build install script
   [olimpiurob refs #22402]
-* Change: Changed fetch url for jenkins build install script to the install 
+* Change: Changed fetch url for jenkins build install script to the install
   script from the main EEA CPB repository
   [olimpiurob refs #22402]
 

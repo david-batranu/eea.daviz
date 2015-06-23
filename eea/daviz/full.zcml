@@ -5,6 +5,7 @@
 
   <include package="eea.cache" />
   <include package="eea.depiction" />
+  <include package="eea.sparql" />
   <include package="eea.relations" />
   <include package="eea.relations.default" />
 
